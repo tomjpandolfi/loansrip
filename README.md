@@ -124,4 +124,6 @@ Thank you to [0xJim](https://twitter.com/0xjim). This repo is forked from [confi
 Thank you to [HelloMoon](https://hellomoon.io) and [BowTiedPyro](https://twitter.com/BowtiedPyro) for creating the APIs used here.
 ## License
 
-[Link to code license](LICENSE.md)# loansrip
+[Link to code license](LICENSE.md)
+
+# loansrip

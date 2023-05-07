@@ -1,0 +1,95 @@
+import {
+  AaveV3Ethereum,
+  AaveV3Arbitrum,
+  AaveV3Optimism,
+  AaveV3Polygon,
+  AaveV3Avalanche,
+  AaveV3Fantom,
+  AaveV3Harmony,
+  AaveV2Avalanche,
+  AaveV2Ethereum,
+  AaveV2EthereumAMM,
+  AaveV2Polygon,
+} from "@bgd-labs/aave-address-book";
+import { ChainId } from "@aave/contract-helpers";
+
+export const marketConfig = {
+  // NOTE: Ethereum & Polygon & Optimism use API
+  ethereum: {
+    chainId: ChainId.mainnet,
+    publicJsonRPCUrl: "https://eth-mainnet.alchemyapi.io/v2/demo",
+    LENDING_POOL_ADDRESS_PROVIDER: AaveV2Ethereum.POOL_ADDRESSES_PROVIDER,
+    UI_POOL_DATA_PROVIDER: AaveV2Ethereum.UI_POOL_DATA_PROVIDER,
+    marketName: "proto_mainnet",
+  },
+  avalanche: {
+    chainId: ChainId.avalanche,
+    publicJsonRPCUrl: "https://api.avax.network/ext/bc/C/rpc",
+    LENDING_POOL_ADDRESS_PROVIDER: AaveV2Avalanche.POOL_ADDRESSES_PROVIDER,
+    UI_POOL_DATA_PROVIDER: AaveV2Avalanche.UI_POOL_DATA_PROVIDER,
+    marketName: "proto_avalanche",
+  },
+  polygon: {
+    chainId: ChainId.polygon,
+    publicJsonRPCUrl: "https://polygon-rpc.com",
+    LENDING_POOL_ADDRESS_PROVIDER: AaveV2Polygon.POOL_ADDRESSES_PROVIDER,
+    UI_POOL_DATA_PROVIDER: AaveV2Polygon.UI_POOL_DATA_PROVIDER,
+    marketName: "proto_polygon",
+  },
+  ethamm: {
+    chainId: ChainId.mainnet,
+    publicJsonRPCUrl: "https://eth-mainnet.alchemyapi.io/v2/demo",
+    LENDING_POOL_ADDRESS_PROVIDER: AaveV2EthereumAMM.POOL_ADDRESSES_PROVIDER,
+    UI_POOL_DATA_PROVIDER: AaveV2EthereumAMM.UI_POOL_DATA_PROVIDER,
+    marketName: "amm_mainnet",
+  },
+  arbitrum: {
+    chainId: ChainId.arbitrum_one,
+    publicJsonRPCUrl: "https://arb1.arbitrum.io/rpc",
+    LENDING_POOL_ADDRESS_PROVIDER: AaveV3Arbitrum.POOL_ADDRESSES_PROVIDER,
+    UI_POOL_DATA_PROVIDER: AaveV3Arbitrum.UI_POOL_DATA_PROVIDER,
+    marketName: "proto_arbitrum_v3",
+  },
+  optimism: {
+    chainId: ChainId.optimism,
+    publicJsonRPCUrl: "https://mainnet.optimism.io",
+    LENDING_POOL_ADDRESS_PROVIDER: AaveV3Optimism.POOL_ADDRESSES_PROVIDER,
+    UI_POOL_DATA_PROVIDER: AaveV3Optimism.UI_POOL_DATA_PROVIDER,
+    marketName: "proto_optimism_v3",
+  },
+  avalanchev3: {
+    chainId: ChainId.avalanche,
+    publicJsonRPCUrl: "https://api.avax.network/ext/bc/C/rpc",
+    LENDING_POOL_ADDRESS_PROVIDER: AaveV3Avalanche.POOL_ADDRESSES_PROVIDER,
+    UI_POOL_DATA_PROVIDER: AaveV3Avalanche.UI_POOL_DATA_PROVIDER,
+    marketName: "proto_avalanche_v3",
+  },
+  polygonv3: {
+    chainId: ChainId.polygon,
+    publicJsonRPCUrl: "https://polygon-rpc.com",
+    LENDING_POOL_ADDRESS_PROVIDER: AaveV3Polygon.POOL_ADDRESSES_PROVIDER,
+    UI_POOL_DATA_PROVIDER: AaveV3Polygon.UI_POOL_DATA_PROVIDER,
+    marketName: "proto_polygon_v3",
+  },
+  ethereumv3: {
+    chainId: ChainId.mainnet,
+    publicJsonRPCUrl: "https://eth-mainnet.alchemyapi.io/v2/demo",
+    LENDING_POOL_ADDRESS_PROVIDER: AaveV3Ethereum.POOL_ADDRESSES_PROVIDER,
+    UI_POOL_DATA_PROVIDER: AaveV3Ethereum.UI_POOL_DATA_PROVIDER,
+    marketName: "proto_mainnet_v3",
+  },
+  harmony: {
+    chainId: ChainId.harmony,
+    publicJsonRPCUrl: "https://api.harmony.one",
+    LENDING_POOL_ADDRESS_PROVIDER: AaveV3Harmony.POOL_ADDRESSES_PROVIDER,
+    UI_POOL_DATA_PROVIDER: AaveV3Harmony.UI_POOL_DATA_PROVIDER,
+    marketName: "proto_harmony_v3",
+  },
+  fantom: {
+    chainId: ChainId.fantom,
+    publicJsonRPCUrl: "https://rpc.ftm.tools",
+    LENDING_POOL_ADDRESS_PROVIDER: AaveV3Fantom.POOL_ADDRESSES_PROVIDER,
+    UI_POOL_DATA_PROVIDER: AaveV3Fantom.UI_POOL_DATA_PROVIDER,
+    marketName: "proto_fantom_v3",
+  },
+};
