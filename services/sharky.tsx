@@ -24,6 +24,7 @@ const fetchSharky = async (
     };
 
     const raw = await fetch(url, options);
+    console.log(raw)
     const res = await raw.json();
     console.log("array from URL", res);
     let date = new Date(res.data[1].blockTime * 1000)
